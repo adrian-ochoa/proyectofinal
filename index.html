@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+
+    <form>
+        <h1>Registrar usuario</h1>
+
+        <label for="nombre">Nombres</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="apellido">Apellidos</label>
+        <input type="text" id="apellido" name="apellido">
+
+        <label for="eps">EPS</label>
+        <select name="eps" id="eps">
+            <option value="Sanitas">Sanitas</option>
+            <option value="La nueva EPS">La nueva EPS</option>
+            <option value="SURA">SURA</option>
+            <option value="Famisanar">Famisanar</option>
+        </select>
+
+        <label for="edad">Edad</label>
+        <input type="number" id="edad" name="edad">
+
+        <div class="radio">
+        <label>Sexo</label><br>
+        <input type="radio" id="masculino" name="genero" value="Masculino">
+        <label for="masculino">Masculino</label>
+        <input type="radio" id="femenino" name="genero" value="Femenino">
+        <label for="femenino">Femenino</label>
+        </div>
+
+        <nav class="checkbox">
+        <input type="checkbox" id="suscripcion" name="suscripcion">
+        <label for="suscripcion">Acepto términos y condiciones</label>
+        </nav>
+
+        <button class="button1" type="button" onclick="crearUsuario()" onclick="confirmarEdicion()">Guardar</button>
+        <button class="button2" type="button" onclick="limpiarDatos()">Limpiar</button>
+    </form>
+
+    <div class="admin">
+    <h1 class="h4 text-center">Usuarios</h4>
+    <div class="table-container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>EPS</th>
+                    <th>Edad</th>
+                    <th>Género</th>
+                    <th>Términos</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="usuariosTabla">
+                <!-- Los usuarios se mostrarán aquí -->
+            </tbody>
+        </table>
+    </div>
+    </div>
+    
+    <script src="./js/formulario.js"></script>
+</body>
+</html>
